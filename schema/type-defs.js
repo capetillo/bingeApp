@@ -6,13 +6,17 @@ const typeDefs = gql`
         id: ID!
         name: String!
         username: String!
-      #for now, movies is string but movies will be defined later
-        movies: String!
+        friends: [User]
+      #for now, movies is string but movies will be its own type later
+        movies: String
 
     }
 
 # first level 
     type Query {
-        users: [User!]!  
+        users: [User!]! 
+        user(id: ID!): User!
     }
 `;
+
+module.exports = {typeDefs}
