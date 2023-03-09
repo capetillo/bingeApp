@@ -12,10 +12,22 @@ const typeDefs = gql`
 
     }
 
+    type Movie {
+        id: ID!
+        title: String!
+        year: Int!
+        cast: String
+        rating: Int!
+        liked: Boolean!
+    }
+
+
 # first level 
     type Query {
         users: [User!]! 
         user(id: ID!): User!
+        movies: [Movie!]!
+        movie(title: String!): Movie!
     }
 `;
 
