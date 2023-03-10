@@ -52,4 +52,4 @@ const MovieList = [{
     
 ]
 
-module.exports = { UserList };
+module.exports = { UserList, MovieList };
