@@ -1,4 +1,4 @@
-const { UserList } = require("../FakeData")
+const { UserList, MovieList } = require("../FakeData")
 const _ = require("lodash");
 
 // will co ntain all of the resolver functions needed to retrieve data from api
@@ -19,10 +19,12 @@ const resolvers = {
         },
         // movie resolvers 
         movies: () => {
-
+            return MovieList;
         },
-        movie: () => {
-
+        movie: (parent, args) => {
+            const title = args.title
+            const movie = _.find(MovieList, {title})
+            return movie;
         }
     },
 };
