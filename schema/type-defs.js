@@ -5,11 +5,9 @@ const typeDefs = gql`
     type User {
         id: ID!
         name: String!
-        username: String!
-        friends: [User]
-      #for now, movies is string but movies will be its own type later
-        movies: String
-
+        email: String!
+        friends: [User!]!
+        swipedMovies: [SwipedMovie!]!
     }
 
     type Movie {
