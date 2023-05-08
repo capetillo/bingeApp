@@ -24,6 +24,18 @@ const typeDefs = gql`
         searchUsers(query: String!): [User!]!
         getSwipedMovies: [SwipedMovie!]!
     }
+
+    type Mutation {
+        signUp(name: String!, email: String!, password: String!): String!
+        signIn(email: String!, password: String!): String!
+        signOut: Boolean!
+        addFriend(userId: ID!): User!
+        swipeMovie(movieId: Int!, swipedRight: Boolean!): SwipedMovie!
+    }
+
+    type Subscription {
+        matchMade(userId: ID!): SwipedMovie!
+    }
 `;
 
 module.exports = {typeDefs}
