@@ -1,5 +1,7 @@
 const { UserList, MovieList } = require("../FakeData")
 const _ = require("lodash");
+import { PrismaClient, Prisma } from '@prisma/client'
+import jwt from 'jsonwebtoken'
 
 // will co ntain all of the resolver functions needed to retrieve data from api
 
