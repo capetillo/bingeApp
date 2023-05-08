@@ -10,13 +10,11 @@ const typeDefs = gql`
         swipedMovies: [SwipedMovie!]!
     }
 
-    type Movie {
+    type SwipedMovie {
         id: ID!
-        title: String!
-        year: Int!
-        cast: String
-        rating: Int!
-        liked: Boolean!
+        movieId: Int!
+        user: User!
+        swipedRight: Boolean!
     }
 
 
