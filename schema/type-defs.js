@@ -20,10 +20,9 @@ const typeDefs = gql`
 
 # first level 
     type Query {
-        users: [User!]! 
-        user(id: ID!): User!
-        movies: [Movie!]!
-        movie(title: String!): Movie!
+        me: User!
+        searchUsers(query: String!): [User!]!
+        getSwipedMovies: [SwipedMovie!]!
     }
 `;
 
