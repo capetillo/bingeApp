@@ -12,7 +12,7 @@ const typeDefs = gql`
 
     type SwipedMovie {
         id: ID!
-        movieId: Int!
+        movieId: String!
         user: User!
         swipedRight: Boolean!
     }
