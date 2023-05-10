@@ -1,9 +1,9 @@
-import { PrismaClient, Prisma } from '@prisma/client'
-import jwt from 'jsonwebtoken'
+import { Prisma } from '@prisma/client'
+import jsonwebtoken from 'jsonwebtoken'
 
 Mutation: {
-    signUp: async (parent, { name, email, password }, { prisma }) => {
-      const user = await prisma.user.create({
+    signUp: async (parent, { name, email, password }, { Prisma }) => {
+      const user = await Prisma.user.create({
         data: {
           name,
           email,
